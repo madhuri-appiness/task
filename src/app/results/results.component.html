@@ -1,0 +1,240 @@
+<div class="container">
+    <div class="banner-holder relative">
+        <div class="banner">
+            <img src="assets/images/banner-low.jpg" alt="">
+        </div>
+        <div class="banner-cont">
+            <img src="assets/images/SellerApp.png" alt="">
+            <div class="search-sec">
+                <ul>
+                    <li>Keyword</li>
+                    <li>Extend</li>
+                    <li>ASIN</li>
+                    <li>Translate</li>
+                </ul>
+                <div class="form-group relative">
+                    <input type="text" class="form-control" placeholder="Keyword or ASN" [(ngModel)]="searchkey">
+                    <button class="btn btn-primary" (click)="searchResult()">PING</button>
+                </div>
+                <h5>ABOUT SELLERAPP</h5>
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </div>
+    <div class="search-result" *ngIf="resultfound">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="keyword-sec">
+                    <div class="keywords relative">
+                        <h4 class="inline-block">Keywords</h4>
+                        <div class="pull-right inline-block">
+                            <div class="gray inline-block">
+                                <a href="download">Download</a>
+                            </div>
+                            <div class="gray inline-block">
+                                <a href="download">FAQ</a>
+                            </div>
+                        </div>
+                        <ul class="keylist">
+                            <li class="inline-block">
+                                <p>{{arrlist}}</p>
+                            </li>
+                            <li class="inline-block pull-right">
+                                <p>Search Volume</p>
+                            </li>
+                        </ul>
+                        <div class="relative">
+                            <ul class="keylist " *ngFor="let word of keywordsArr | filter:searchkey">
+                                <li class="inline-block">
+                                    <h5>{{word.keyword}}</h5>
+                                </li>
+                                <li class="inline-block pull-right">
+                                    <ul class="vol green" [ngClass]="{'green':(word.search_volume.label == 'High'),'red':(word.search_volume.label == 'Low'),'yellow':(word.search_volume.label == 'Medium')}">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+                            <div class="overlay-holder">
+                                <div class="powered-sec">
+                                    <div class="cont1">
+                                        <h4>Sellerapp is Powered By</h4>
+                                        <p>The Free Amazon Keyword Research Tool</p>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="inline-block pull-left">
+                                            <h4>Boost your Amazon Sales Now!</h4>
+                                        </div>
+                                        <div class="inline-block pull-right">
+                                            <button class="btn btn-primary">
+                                         START FREE TRIAL
+                                       </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="powered-sec">
+                                    <div class="clearfix">
+                                        <div class="inline-block pull-left">
+                                            <h4><i class="fa fa-download" aria-hidden="true"></i> Download Full List here</h4>
+                                        </div>
+                                        <div class="inline-block pull-right">
+                                            <button class="btn btn-warning">
+                                        BEGIN DOWNLOAD
+                                       </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="frequent-words">
+                    <h4>Tell others about sellerapp</h4>
+                    <h4><a>Share</a></h4>
+                    <div class="keylist">
+                        <h4>Frequent Words</h4>
+
+                        <span class="words" *ngFor="let frequent of arr">{{frequent}}</span>
+
+
+
+                    </div>
+                    <div class="keylist">
+                        <h4>Relevent Products</h4>
+                        <span>
+                          173.451 found
+                        </span>
+                        <ul>
+                            <li class="inline-block">
+                                <img src="assets/images/spinner_PNG.png" alt="">
+                            </li>
+                            <li class="inline-block">
+                                <img src="assets/images/spinner_PNG.png" alt="">
+                            </li>
+                            <li class="inline-block">
+                                <img src="assets/images/spinner_PNG.png" alt="">
+                            </li>
+                            <li class="inline-block">
+                                <img src="assets/images/spinner_PNG.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-one">
+        <div class="heading">
+            <h4>SELLERAPP: The Free Amazon Keyword Research Tool</h4>
+            <p>Amazon keyword research done with real data from actual customer search queries</p>
+        </div>
+        <div class="about">
+            <div class="row">
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="about-content">
+                        <h4>The Free Amazon Keyword Research Tool</h4>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-two">
+        <h4>LIKE THIS FREE AMAZON KEYWORD RESEARCH TOOL?</h4>
+        <h5>Try <b>Sellerapp :</b>Our All-in-One Amazon Software for Professional Sellers and Vendors</h5>
+        <div class="card-holder">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="tick">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                        </div>
+                        <h5>Amazon PPC</h5>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="tick">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                        </div>
+                        <h5>Amazon PPC</h5>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="card">
+                        <div class="tick">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                        </div>
+                        <h5>Amazon PPC</h5>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller-app-trial">
+            <div class="logo-trial">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <button class="btn btn-primary">7 Day Free Trial</button>
+            <p>No credit card required! more information at <a href="sellerApp.com">sellerApp.com</a></p>
+        </div>
+    </div>
+</div>
